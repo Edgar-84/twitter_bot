@@ -21,14 +21,14 @@ too_many_requests_message = {
 }
 
 start_messages = {
-    "en": "Enter profile X in the format '@BillGates' to get a summary of all news for the profile",
-    "ru": "Enter profile X in the format '@BillGates' to get a summary of all news for the profile",
-    "es": "Enter profile X in the format '@BillGates' to get a summary of all news for the profile",
-    "fr": "Enter profile X in the format '@BillGates' to get a summary of all news for the profile",
-    "de": "Enter profile X in the format '@BillGates' to get a summary of all news for the profile",
-    "uk": "Enter profile X in the format '@BillGates' to get a summary of all news for the profile",
-    "zh-cn": "Enter profile X in the format '@BillGates' to get a summary of all news for the profile",
-    "it": "Enter profile X in the format '@BillGates' to get a summary of all news for the profile"
+    "en": "Enter profile X in the format *'BillGates'* to get a summary of all news for the profile",
+    "ru": "Enter profile X in the format *'BillGates'* to get a summary of all news for the profile",
+    "es": "Enter profile X in the format *'BillGates'* to get a summary of all news for the profile",
+    "fr": "Enter profile X in the format *'BillGates'* to get a summary of all news for the profile",
+    "de": "Enter profile X in the format *'BillGates'* to get a summary of all news for the profile",
+    "uk": "Enter profile X in the format *'BillGates'* to get a summary of all news for the profile",
+    "zh-cn": "Enter profile X in the format *'BillGates'* to get a summary of all news for the profile",
+    "it": "Enter profile X in the format *'BillGates'* to get a summary of all news for the profile"
 }
 
 
