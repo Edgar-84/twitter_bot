@@ -13,6 +13,7 @@ class Profile(Base):
     username = Column(String, unique=True, index=True, nullable=False)
     full_name = Column(String, nullable=True)
     twitter_id = Column(Integer, nullable=False)
+    followers_count = Column(Integer, nullable=True)
     last_checked = Column(DateTime, nullable=True)
 
 
@@ -24,9 +25,9 @@ class ProfileCRUD(AsyncCRUD):
         async with self._get_session() as session:
             return await session.get(Profile, profile_id)
 
-    async def create(self, username: str, twitter_id: int):
+    async def create(self, username: str, twitter_id: int, followers_count: int = None):
         async with self._get_session() as session:
-            profile = Profile(username=username, twitter_id=twitter_id)
+            profile = Profile(username=username, twitter_id=twitter_id, followers_count=followers_count)
             session.add(profile)
             await session.commit()
             await session.refresh(profile)

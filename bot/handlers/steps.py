@@ -94,7 +94,7 @@ async def save_posts_to_txt(posts: list[dict]) -> str:
 
     with open(filepath, "w", encoding="utf-8") as f:
         for i, post in enumerate(posts, start=1):
-            f.write(f"Post {i}:\n{post['content']}\n\n")
+            f.write(f"Post {i} by @{post['author']} who has: \n{post['followers_count']} followers\n{post['likeCount']} likes\n{post['viewCount']} views\n{post['replyCount']} replies\n{post['retweetCount']} retweets:\n{post['content']}\n\n")
 
     return filepath
 

@@ -59,10 +59,17 @@ class ApifyService:
             
             results = []
             for post in posts:
-                # print(f"🔹 Post:\n{post}")
+                print(f"🔹 Post:\n{post}")
+                # TODO add likeCount, replyCount, retweetCount, viewCount, author, followers_count to DB
                 results.append({
+                    "author": post["author"].get("userName", "Not found"),
+                    "followers_count": post["author"].get("followers", "Not found"),
                     "content": post["text"],
                     "url": post["url"],
+                    "likeCount": post.get("likeCount", "Not found"),
+                    "replyCount": post.get("replyCount", "Not found"),
+                    "retweetCount": post.get("retweetCount", "Not found"),
+                    "viewCount": post.get("viewCount", "Not found"),
                     "timestamp": datetime.strptime(post["createdAt"], '%a %b %d %H:%M:%S %z %Y')
                 })
 
@@ -112,10 +119,12 @@ class ApifyService:
             results = []
             for following in followings:
                 # print(f"🔹 Following:\n{following}")
+                # TODO add followers to DB
                 results.append({
                     "username": following["userName"],
                     "full_name": following["name"],
-                    "twitter_id": following["id"]
+                    "twitter_id": following["id"],
+                    "followers_count": following["followers"]
                 })
 
             return results
